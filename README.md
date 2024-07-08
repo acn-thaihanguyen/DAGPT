@@ -10,7 +10,7 @@ DAGPT is a data analysis tool that uses GPT models to assist with data manipulat
 
 ## Application Interface
 
-![Demo Image](images/demo_image_01.png)
+![Demo Video](videos/demo_video.gif)
 
 ## Getting Started
 
@@ -90,10 +90,9 @@ This will launch the web application in your default web browser.
 │   └── sample_data.csv
 ├── notebooks
 ├── requirements.txt
-└── images
-    └── demo_image_01.png
 └── videos
     └── demo_video_01.mp4
+    └── demo_video.gif
 ```
 
 ### Project Components
@@ -107,7 +106,7 @@ This will launch the web application in your default web browser.
 - `dagpt/prompts`: Contains prompt templates for the agents.
   - `prompts.py`: Prompt templates for different scenarios.
 - `dagpt/tools`: Contains utility tools for data manipulation and model interactions.
-  - `tools.py`: Primary tools module.
+  - `tools.py`: Customized tools module.
   - `tools_ori.py`: Original tools module.
 - `dagpt/utils`: General utility functions.
   - `utils.py`: Utility functions used throughout the project.
@@ -118,11 +117,6 @@ This will launch the web application in your default web browser.
 - `images`: Directory for storing demo videos.
   - `demo_image_01.png`: A demo image showing the application interface.
 - `videos`: Directory for storing demo videos.
-  - `demo_video_01.mp4`: A demo video showing how to use the application.
-
-### Demo Video
-
-A demo video demonstrating how to use the application can be found in the `videos` folder: [demo_video_01.mp4](videos/demo_video_01.mp4)
 
 ## Contributing
 
