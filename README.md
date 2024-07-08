@@ -1,6 +1,6 @@
-# Data Analysis Agent
+# DAGPT: Data Analysis GPT
 
-Welcome to the Data Analysis Agent! This tool allows you to upload your CSV data, ask questions about the data, and visualize the results. The app leverages the power of Large Language Models (LLMs) to provide insightful analysis and visualizations based on your queries.
+DAGPT is a data analysis tool that uses GPT models to assist with data manipulation and analysis tasks via a conversational interface. This project leverages Streamlit to provide an interactive web application where users can upload their data, ask questions, and receive insights.
 
 ## Features
 
@@ -8,45 +8,40 @@ Welcome to the Data Analysis Agent! This tool allows you to upload your CSV data
 - **Data Analysis**: Enter queries about your data and get responses powered by LLMs.
 - **Data Visualization**: Generate and display plots based on your data queries.
 
-## How to Use
+## Application Interface
 
-1. **Upload CSV**: Use the file uploader in the sidebar to upload your CSV file.
-2. **Select Agent Type**: Choose the type of agent from the dropdown menu.
-3. **Enter Query**: Input your query about the data in the text box.
-4. **Run Query**: Click the "Run Query" button to get the analysis and visualizations.
-5. **View Results**: See the generated plots and responses. The chat history is displayed below for reference.
+[Demo Image](images/demo_image_01.png)
 
-## Demo
+## Getting Started
 
-Check out the demo video below to see the app in action:
+### Prerequisites
 
-![Demo Video](./videos/demo_video_01.mp4)
+- Python 3.9 or higher
+- pip (Python package installer)
 
-## Installation
+### Installation
 
-To run this app locally, follow these steps:
+1. Clone the repository:
 
-1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/acn-thaihanguyen/DAGPT.git
+   cd DAGPT
+   ```
 
-    ```bash
-    git clone https://github.com/acn-thaihanguyen/DAGPT.git
-    cd DAGPT
+2. Create a virtual enviroment:
+
     ```
-
-2. **Create a virtual environment**:
-
-    ```bash
     python -m venv .venv
     source .venv/bin/activate   # On Windows use `.venv\Scripts\activate`
     ```
 
-3. **Install dependencies**:
+3. Install the required dependencies:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4. **Set up environment variables**:
+4. Set up environment variables:
     Create a `.env` file in the root directory of the project and add your environment variables. Example is provided in `.env.sample`:
 
     ```
@@ -58,18 +53,81 @@ To run this app locally, follow these steps:
     PYTHONPATH=/path/to/dagpt/folder
     ```
 
-5. **Run the Streamlit app**:
+### Running the Application
 
-    ```bash
-    streamlit run app.py
-    ```
+To start the Streamlit app, run the following command in your terminal:
 
-Make sure to install all dependencies from the `requirements.txt` file.
+```bash
+streamlit run app.py
+```
 
-## License
+This will launch the web application in your default web browser.
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+### Usage
+
+1. Upload a CSV file containing your data.
+2. Use the text input to ask questions about the data.
+
+## Project Structure
+
+```
+├── README.md
+├── app.py
+├── dagpt
+│   ├── agents
+│   │   ├── base.py
+│   │   └── pandas_agent.py
+│   ├── models
+│   │   └── llms.py
+│   ├── prompts
+│   │   └── prompts.py
+│   ├── tools
+│   │   ├── tools.py
+│   │   └── tools_ori.py
+│   └── utils
+│       └── utils.py
+├── data
+│   └── sample_data.csv
+├── notebooks
+├── requirements.txt
+└── images
+    └── demo_image_01.png
+└── videos
+    └── demo_video_01.mp4
+```
+
+### Project Components
+
+- `app.py`: The main entry point for the Streamlit application.
+- `dagpt/agents`: Contains the agent classes responsible for handling user queries.
+  - `base.py`: Base class for agents.
+  - `pandas_agent.py`: Agent specifically designed for handling pandas DataFrames.
+- `dagpt/models`: Contains the language model classes.
+  - `llms.py`: Class for interacting with GPT models.
+- `dagpt/prompts`: Contains prompt templates for the agents.
+  - `prompts.py`: Prompt templates for different scenarios.
+- `dagpt/tools`: Contains utility tools for data manipulation and model interactions.
+  - `tools.py`: Primary tools module.
+  - `tools_ori.py`: Original tools module.
+- `dagpt/utils`: General utility functions.
+  - `utils.py`: Utility functions used throughout the project.
+- `data`: Directory for storing sample data files.
+  - `sample_data.csv`: A sample CSV file for testing.
+- `notebooks`: Directory for Jupyter notebooks (for experiments and testing).
+- `requirements.txt`: List of required Python packages.
+- `images`: Directory for storing demo videos.
+  - `demo_image_01.png`: A demo image showing the application interface.
+- `videos`: Directory for storing demo videos.
+  - `demo_video_01.mp4`: A demo video showing how to use the application.
+
+### Demo Video
+
+A demo video demonstrating how to use the application can be found in the `videos` folder: [demo_video_01.mp4](videos/demo_video_01.mp4)
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+Contributions are welcome! Please open an issue or submit a pull request on GitHub.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
