@@ -10,7 +10,7 @@ DAGPT is a data analysis tool that uses GPT models to assist with data manipulat
 
 ## Application Interface
 
-[Demo Image](images/demo_image_01.png)
+![Demo Image](images/demo_image_01.png)
 
 ## Getting Started
 
