@@ -1,14 +1,27 @@
 # DAGPT: Data Analysis GPT
 
-DAGPT is a data analysis tool that uses GPT models to assist with data manipulation and analysis tasks via a conversational interface. This project leverages Streamlit to provide an interactive web application where users can upload their data, ask questions, and receive insights.
+DAGPT is a data analysis tool that uses LLMs (Large Language models) to assist with data manipulation and analysis tasks via a conversational interface. This project leverages Streamlit to provide an interactive web application where users can upload their data, ask questions, explore your data interactively and receive insights.
 
 ## Features
 
 - **CSV File Upload**: Easily upload your CSV data through the sidebar.
 - **Data Analysis**: Enter queries about your data and get responses powered by LLMs.
 - **Data Visualization**: Generate and display plots based on your data queries.
+- **Interactive Visualization Tool**: Explore your data interactively using various visualizations. Upload your dataset and start analyzing with drag-and-drop functionality to create customized charts.
 
 ## Application Interface
+
+### Chat With Your Data
+
+![Chat With Your Data](images/chat_with_data.png)
+Welcome! Upload your CSV file, enter your query, and let the agent handle the rest.
+
+### Interactive Visualization Tool
+
+![Interactive Visualization Tool](images/interactive_visualization_tool.png)
+Welcome! This tool allows you to explore your data interactively using various visualizations. Upload your dataset and start analyzing!
+
+### Demo Video
 
 ![Demo Video](videos/demo_video.gif)
 
@@ -58,7 +71,7 @@ DAGPT is a data analysis tool that uses GPT models to assist with data manipulat
 To start the Streamlit app, run the following command in your terminal:
 
 ```bash
-streamlit run app.py
+streamlit run 1_📊_Chat With Your Data.py
 ```
 
 This will launch the web application in your default web browser.
@@ -67,12 +80,13 @@ This will launch the web application in your default web browser.
 
 1. Upload a CSV file containing your data.
 2. Use the text input to ask questions about the data.
+3. Use the interactive visualization tool to explore your data and create visualizations.
 
 ## Project Structure
 
 ```
 ├── README.md
-├── app.py
+├── 1_📊_Chat With Your Data.py
 ├── dagpt
 │   ├── agents
 │   │   ├── base.py
@@ -89,7 +103,12 @@ This will launch the web application in your default web browser.
 ├── data
 │   └── sample_data.csv
 ├── notebooks
+├── pages
+│   └── 2_📈_Interactive Visualization Tool.py
 ├── requirements.txt
+│── images
+│   └── chat_with_data.png
+│   └── interactive_visualization_tool.png
 └── videos
     └── demo_video_01.mp4
     └── demo_video.gif
@@ -97,7 +116,7 @@ This will launch the web application in your default web browser.
 
 ### Project Components
 
-- `app.py`: The main entry point for the Streamlit application.
+- `1_📊_Chat With Your Data.py`: Script for the "Chat With Your Data" feature.
 - `dagpt/agents`: Contains the agent classes responsible for handling user queries.
   - `base.py`: Base class for agents.
   - `pandas_agent.py`: Agent specifically designed for handling pandas DataFrames.
@@ -113,14 +132,23 @@ This will launch the web application in your default web browser.
 - `data`: Directory for storing sample data files.
   - `sample_data.csv`: A sample CSV file for testing.
 - `notebooks`: Directory for Jupyter notebooks (for experiments and testing).
+- `pages`: Directory for additional Streamlit pages.
+  - `2_📈_Interactive Visualization Tool.py`: Script for the interactive visualization tool.
 - `requirements.txt`: List of required Python packages.
-- `images`: Directory for storing demo videos.
-  - `demo_image_01.png`: A demo image showing the application interface.
+- `images`: Directory for storing demo images.
+  - `chat_with_data.png`: Image showing the "Chat With Your Data" interface.
+  - `interactive_visualization_tool.png`: Image showing the "Interactive Visualization Tool" interface.
 - `videos`: Directory for storing demo videos.
 
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request on GitHub.
+
+## Acknowledgements
+
+- [LangChain](https://github.com/langchain-ai/langchain)
+- [Streamlit](https://www.streamlit.io/)
+- [Pygwalker](https://github.com/Kanaries/pygwalker)
 
 ## License
 
