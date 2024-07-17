@@ -13,8 +13,7 @@ Observation: the outcome of the action
 ... (this Thought/Action/Action Input/Observation cycle can repeat multiple times)
 Thought: I now understand the final answer. 
 
-Final Answer: the conclusive answer to the initial input question. 
-If plot, draw or visualize action is used, YOU HAVE TO use `st.pyplot(plt)` to show the plot.
+Final Answer: the conclusive answer to the initial input question.
 
 Here is the output of `print(df.head())`:
 {df_head}
