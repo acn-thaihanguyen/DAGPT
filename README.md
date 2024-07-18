@@ -23,7 +23,7 @@ Welcome! This tool allows you to explore your data interactively using various v
 
 ### Demo Video
 
-![Demo Video](videos/demo_clip.gif)
+![Demo Video](videos/demo_clip_v2.gif)
 
 ## Getting Started
 
